@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Coneptos JavaScript</title>
+		<!-- Estilos -->
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+				<p>ARCHIVO PLANO</p>
+				<p>XML</p>
+				<p>JSON</p>
+				<p>PARQUET</p>
+				</section>
+				<section>ARCHIVO PLANO</section>
+				<section>
+					<section>
+						<h2>¿QUE ES?</h2>
+						<br>
+						<p>Los archivos planos son una colección de información que está almacenada y es accedida de forma organizada en una base de datos. Se suele usar para almacenar información en una forma no estructurada.</p>
+						
+					</section>
+					<section>
+					<img src="img/plano.gif" width="900" />
+					</section>
+					<section>
+						<p>Un ejemplo son los documentos CSV (valores separados por coma), donde la información es presentada en cada campo separado por una coma. </p>
+						</section>
+<section>
+<h2>EJEMPLOS</h2>
+<p>Existen muchos tipos diferentes de archivos planos, cada uno con su propia estructura para representar información. Aquí hay algunos ejemplos:</p>
+<lu>
+<li>Archivo CSV. </li>
+<li>Archivo INI. </li>
+<li>Archivo TXT. </li>
+<li>Archivo XML.  </li>
+</lu>
+				</section>
+				<section>XML</section>
+				<section>
+					<section>
+						<h2>¿QUE ES?</h2>
+						<p>El lenguaje de marcado extensible (XML) permite definir y almacenar datos de forma compartible. XML admite el intercambio de información entre sistemas de computación, como sitios web, bases de datos y aplicaciones de terceros. Las reglas predefinidas facilitan la transmisión de datos como archivos XML a través de cualquier red, ya que el destinatario puede usar esas reglas para leer los datos de forma precisa y eficiente.</p>
+					</section>
+	</section>
+<section>
+<img src="img/xml.gif" width="900" />
+</section>
+					<section>
+						<h2>¿PORQUE ES IMPORTANTE?</h2>
+						<p>El lenguaje de marcado extensible (XML) es un lenguaje de marcado que proporciona reglas para definir cualquier dato. A diferencia de otros lenguajes de programación, XML no puede realizar operaciones de computación por sí mismo. En cambio, se puede implementar cualquier software o lenguaje de programación para la administración estructurada de datos.</p>
+					</section>
+					<section>
+<h2>BENEFICIOS</h2>
+<lu>
+<li>Respaldo para las transacciones interempresariales </li>
+<li>Conservación de la integridad de los datos</li>
+<li>Mejora de la eficiencia de búsqueda</li>
+<li>Diseño de aplicaciones flexibles</li>
+</lu>
+					</section>
+				</section>
+				<section>JSON</section>
+				<section>
+					<section>
+						<h2>¿QUE ES?</h2>
+						<p>JSON (acrónimo de JavaScript Object Notation, 'notación de objeto de JavaScript') es un formato de texto sencillo para el intercambio de datos. Se trata de un subconjunto de la notación literal de objetos de JavaScript, aunque, debido a su amplia adopción como alternativa a XML, se considera un formato independiente del lenguaje.</p>
+</section>
+<section>
+<img src="img/json.jpg" width="900" />
+</section>
+<section>			
+<h2>EJEMPLO</h2>
+<p>A continuación se muestra un ejemplo simple de definición de barra de menús usando JSON y XML.</p>
+<p>JSON:</p>
+<img src="img/json.png" width="500" />
+					</section>	
+</section>					
+<section>
+<p>Es una posible representación JSON del siguiente XML:</p>
+<img src="img/json2.png" width="500" />
+</section>	
+					</section>
+				<section>PARQUETS</section>
+				<section>
+					<section>
+						<h2>¿QUE ES?</h2>
+						<p> El formato Parquet, es un tipo de fichero que contiene datos (de tipo tabla) en su interior, de forma similar a cuando hablamos del fichero tipo CSV. Aunque parezca obvio, los ficheros parquet tienen extensión .</p>
+					</section>
+					<section>
+
+						<p>parquet y a diferencia de un CSV, no es un fichero en texto plano (se representa de forma binaria), lo que significa que no lo podemos abrir y examinar con un simple editor de texto. </p>
+					</section>
+					<section>
+
+<img src="img/parquet.gif" width="800" />
+					</section>
+				</section>
+					</section>
+<section>
+<section>VIDEO CHISPUM</section>
+<section><iframe width="853" height="480" src="https://www.youtube.com/embed/dpEMJ4dKv5I" title="10 de abril de 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></section>
+<section><h2>CODIGO .JS</h2>
+<br>
+<p>function chispum (num){
+if (num % 15 == 0){
+return 'chispum';}
+if (num % 3 == 0){
+return 'chis';}<
+if (num % 5 == 0)
+return 'pum';}   
+return num;
+}
+module.exports = chispum;</p></section>
+<section><h2>CODIGO TEST.JS</h2>
+<br>
+<p>const chispum = require("./chispum")
+describe ("chispum", () =>{
+    test("deberia imprimir chispum si recibe un multiplo de 3 y 5", () =>{
+        const expected ='chispum';
+        const result = chispum (30);
+        expect (expected).toBe(result);
+        });</p>
+</section>
+<section>
+       <p> test("deberia imprimir chis si recibe un multiplo de 3", () =>{
+        const expected ='chis';
+        const result = chispum (6);
+         expect (expected).toBe(result);
+         });</p>
+</section>
+<section>
+<p>         test("deberia imprimir pum si recibe un multiplo de 5", () =>{
+            const expected ='pum';
+            const result = chispum (10);
+             expect (expected).toBe(result);
+             });
+    });</p></section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
